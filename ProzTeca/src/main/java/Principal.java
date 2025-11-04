@@ -5,9 +5,12 @@ public class Principal {
                 10, 249, "JK"
         );
 
+        Dvd dvd = new Dvd(
+                "Percy Jackson", "10/10/2010", 12, 149, true
+        );
 
-        System.out.println(livro.getTitulo());
 
+        System.out.println(dvd);
 
     }
 }

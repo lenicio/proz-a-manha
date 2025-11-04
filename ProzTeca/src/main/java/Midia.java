@@ -26,6 +26,25 @@ public abstract class Midia {
         this.restricaoIdade = restricaoIdade;
     }
 
+    public Midia(String titulo, String dataPublicacao, Integer restricaoIdade) {
+
+        if (titulo.isBlank()) {
+            throw new IllegalArgumentException("titulo não pode estar vazio");
+        }
+
+        if (dataPublicacao.isBlank()) {
+            throw new IllegalArgumentException("titulo não pode estar vazio");
+        }
+        if (restricaoIdade < 0 || restricaoIdade > 18) {
+            throw new IllegalArgumentException("faixa de idade permitida 0-18");
+        }
+
+        this.titulo = titulo;
+        this.dataPublicacao = dataPublicacao;
+        this.restricaoIdade = restricaoIdade;
+    }
+
+
     public String getTitulo() {
         return titulo;
     }
